@@ -25,6 +25,11 @@ img {
   height: auto;
 }
 
+li {
+    padding-top: .25em;
+    padding-bottom: .25em;
+}
+
 .not-links {
   margin: 0;
   padding: 0;
