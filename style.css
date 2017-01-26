@@ -2,8 +2,8 @@ body {
   color: orange;
   font-family: sans-serif;
   
+  background-color: #222;
   transition: background-color 6s linear;
-  background-color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -12,22 +12,35 @@ h1, h2, h3, h4, h5, h6 {
 
 a,
 a:link,
-a:visited,
+a:visited
+{
+  display: inline-block;
+  padding: 1em;
+  margin: 1em;
+
+  color: yellow;
+  border: .5em solid yellow;
+  transition: border-color 3s linear, color 3s linear;
+
+  text-decoration: underline;
+}
+
 a:hover,
 a:focus
 {
-  color: yellow;
-  text-decoration: underline;
+    border-color: yellow;
+    background-color: yellow;
+    color: black;
+    transition: none;
+}
+
+li {
+    display: block;
 }
 
 img {
   max-width: 100%;
   height: auto;
-}
-
-li {
-    padding-top: .25em;
-    padding-bottom: .25em;
 }
 
 .not-links {
@@ -39,4 +52,17 @@ li {
 .not-links li {
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 768px) {
+    ul {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    li {
+        padding-left: 0;
+        margin-left: 0;
+        text-align: center;
+    }
 }

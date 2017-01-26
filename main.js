@@ -12,7 +12,7 @@
         destIndex: null
     };
 
-    var target = document.body;
+    var targets = document.querySelectorAll('a');
 
     function random_int(min, max) {
         min = Math.ceil(min);
@@ -49,11 +49,13 @@
             rgb[i] = DISCO_PALETTE[colorState.destIndex][i];
         }
 
-        // Set the background color
-        target.style.backgroundColor = 'rgb('
-            + rgb[0] + ','
-            + rgb[1] + ','
-            + rgb[2] + ')';
+        // Set the color and border-color of the targets
+        var color = 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
+        for (i = 0; i < targets.length; i++) {
+            var target = targets[i];
+            target.style.color = color;
+            target.style.borderColor = color;
+        }
     }
 
     function on_fade_finished() {
@@ -66,7 +68,7 @@
         colorState.srcIndex = random_int(0, DISCO_PALETTE.length - 1);
 
         // Listen for the end of the color-change transition
-        target.addEventListener('transitionend', on_fade_finished, false);
+        targets[0].addEventListener('transitionend', on_fade_finished, false);
 
         // Trigger the first color-change
         window.setTimeout(on_fade_finished, 100);
