@@ -18,24 +18,23 @@ a:visited
   padding: 1em;
   margin: 1em;
 
-  color: yellow;
-  border: .5em solid yellow;
-  transition: border-color 3s linear, color 3s linear;
+  background-color: yellow;
+  transition: background-color 3s linear, color 100ms ease-in-out;
+  color: #000;
 
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover,
-a:focus
+a:focus,
+a:active
 {
-    border-color: yellow;
-    background-color: yellow;
-    color: black;
-    transition: none;
+    color: white;
+    transition: background-color 100ms linear, color 100ms ease-in-out;
 }
 
 li {
-    display: block;
+    display: inline-block;
 }
 
 img {
@@ -58,6 +57,13 @@ img {
     ul {
         padding-left: 0;
         margin-left: 0;
+    }
+
+    a,
+    a:link,
+    a:visited,
+    li {
+        display: block;
     }
 
     li {
