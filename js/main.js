@@ -1,7 +1,7 @@
 'use strict';
 
 (function() {
-    var DISCO_PALETTE = [
+    let DISCO_PALETTE = [
         [  7, 148, 202], // blue
         [226,  31, 149], // purple
         [249, 124,  57], // orange
@@ -22,7 +22,10 @@
             this.destIndex = null;
 
             // Choose a random color to start
-            this.srcIndex = random_int(0, DISCO_PALETTE.length - 1);
+            this.destIndex = random_int(0, DISCO_PALETTE.length - 1);
+
+            // Immediately use the starting color
+            this.change_color()
 
             // Listen for the end of the color-change transition
             this.target.addEventListener(
@@ -33,18 +36,13 @@
 
             // Trigger the first color-change
             setTimeout(this.on_fade_finished.bind(this), 100);
-            //document.addEventListener(
-            //    'DOMContentLoaded',
-            //    this.on_fade_finished.bind(this),
-            //    false
-            //);
         }
 
         choose_next_color() {
             this.srcIndex = this.destIndex;
 
             // Choose which direction to go around the palette circle
-            var delta;
+            let delta;
             if (random_int(0, 1) === 0) {
                 delta = -1;
             } else {
@@ -62,28 +60,35 @@
             }
         }
 
-        change_color() {
-            // Get the current RGB values based on destIndex
-            var rgb = {};
-            for (var i = 0; i < 3; i++) {
-                rgb[i] = DISCO_PALETTE[this.destIndex][i];
+        getColorFromDiscoIndex(i) {
+            let rgb = {};
+            for (let j = 0; j < 3; j++) {
+                rgb[j] = DISCO_PALETTE[i][j];
             }
 
+            return rgb;
+        }
+
+        change_color() {
+            // Get the current RGB values based on destIndex
+            let rgb = this.getColorFromDiscoIndex(this.destIndex);
+
             // Set the background-color of the target
-            var color = 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
+            let color = 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
             this.target.style.backgroundColor = color;
         }
 
         on_fade_finished() {
             this.choose_next_color();
             this.change_color();
+            this.target.classList.add('initialized')
         };
     }
 
     function init() {
-        var targets = document.getElementsByTagName('a');
-        for (var i = 0; i < targets.length; i++) {
-            var target = targets[i];
+        let targets = document.getElementsByTagName('a');
+        for (let i = 0; i < targets.length; i++) {
+            let target = targets[i];
             new ColorShifter(target);
         }
     }

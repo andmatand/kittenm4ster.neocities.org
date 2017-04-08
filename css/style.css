@@ -3,7 +3,6 @@ body {
   font-family: sans-serif;
   
   background-color: #222;
-  transition: background-color 6s linear;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,23 +17,29 @@ a:visited
   padding: 1em;
   margin: 1em;
 
-  background-color: yellow;
-  transition: background-color 3s linear, color 100ms ease-in-out;
-  color: #000;
+  background-color: #222;
+  color: #222;
 
   text-decoration: none;
+}
+
+a.initialized {
+  transition:
+    background-color 1s linear,
+    color 100ms ease-in-out,
+    opacity 500ms linear;
 }
 
 a:hover,
 a:focus,
 a:active
 {
-    color: white;
-    transition: background-color 100ms linear, color 100ms ease-in-out;
+  color: white;
+  transition: background-color 100ms linear, color 100ms ease-in-out;
 }
 
 li {
-    display: inline-block;
+  display: inline-block;
 }
 
 img {
@@ -54,21 +59,21 @@ img {
 }
 
 @media (max-width: 768px) {
-    ul {
-        padding-left: 0;
-        margin-left: 0;
-    }
+  ul {
+    padding-left: 0;
+    margin-left: 0;
+  }
 
-    a,
-    a:link,
-    a:visited,
-    li {
-        display: block;
-    }
+  a,
+  a:link,
+  a:visited,
+  li {
+    display: block;
+  }
 
-    li {
-        padding-left: 0;
-        margin-left: 0;
-        text-align: center;
-    }
+  li {
+    padding-left: 0;
+    margin-left: 0;
+    text-align: center;
+  }
 }
