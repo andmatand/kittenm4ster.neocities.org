@@ -47,6 +47,10 @@ img {
   height: auto;
 }
 
+a.no-disco {
+  padding: 0;
+}
+
 .not-links {
   margin: 0;
   padding: 0;

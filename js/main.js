@@ -89,7 +89,9 @@
         let targets = document.getElementsByTagName('a');
         for (let i = 0; i < targets.length; i++) {
             let target = targets[i];
-            new ColorShifter(target);
+            if (target.className !== 'no-disco') {
+                new ColorShifter(target);
+            }
         }
     }
 
