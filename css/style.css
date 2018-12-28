@@ -110,12 +110,16 @@ ul.not-links li {
   }
 
   ul.pico8-carts li {
-    min-width: 160px;
+    min-width: calc(160px + .25rem);
     margin: 0;
     padding: 0 .25rem;
   }
 
   ul.pico8-carts a {
     margin: 0;
+  }
+
+  ul.pico8-carts img {
+    min-width: 160px;
   }
 }
