@@ -8,7 +8,23 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  text-shadow: 3px 3px #ff5500;
+  text-shadow: 4px 4px rgba(241, 38, 161, 0.7);
+}
+
+h2 {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+ul {
+  margin: 0rem 0;
+  padding: 0 0 0 2rem;
+}
+
+li {
+  display: inline-block;
+  margin: 1em;
+  padding: 0;
 }
 
 a,
@@ -17,9 +33,8 @@ a:visited
 {
   display: inline-block;
   padding: 1em;
-  margin: 1em;
 
-  background-color: #222;
+  background-color: rgb(226, 31, 149);
   color: #222;
 
   text-decoration: none;
@@ -40,10 +55,6 @@ a:active
   transition: background-color 100ms linear, color 100ms ease-in-out;
 }
 
-li {
-  display: inline-block;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -51,21 +62,25 @@ img {
 
 a.no-disco {
   padding: 0;
+  background-color: inherit;
 }
 
-.not-links {
+ul.pico8-carts img {
+  image-rendering: pixelated;
+}
+
+ul.not-links {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.not-links li {
+ul.not-links li {
   margin: 0;
-  padding: 0;
 }
 
 @media (max-width: 768px) {
-  h1 {
+  h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 
@@ -77,13 +92,12 @@ a.no-disco {
   a,
   a:link,
   a:visited,
-  li {
+  li
+  {
     display: block;
   }
 
   li {
-    padding-left: 0;
-    margin-left: 0;
     text-align: center;
   }
 
@@ -97,7 +111,8 @@ a.no-disco {
 
   ul.pico8-carts li {
     min-width: 160px;
-    padding: .25rem;
+    margin: 0;
+    padding: 0 .25rem;
   }
 
   ul.pico8-carts a {
