@@ -1,7 +1,7 @@
 'use strict';
 
 (function() {
-    let DISCO_PALETTE = [
+    const DISCO_PALETTE = [
         [  7, 148, 202], // blue
         [226,  31, 149], // purple
         [249, 124,  57], // orange
@@ -25,7 +25,7 @@
             this.destIndex = random_int(0, DISCO_PALETTE.length - 1);
 
             // Immediately use the starting color
-            this.change_color()
+            this.change_color();
 
             // Listen for the end of the color-change transition
             this.target.addEventListener(
@@ -81,7 +81,7 @@
         on_fade_finished() {
             this.choose_next_color();
             this.change_color();
-            this.target.classList.add('initialized')
+            this.target.classList.add('initialized');
         };
     }
 
