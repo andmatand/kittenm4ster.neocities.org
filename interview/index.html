@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#222">
+    <title>Andrew “kittenm4ster” Anderson – PICOPortr8s</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=PT+Serif">
+    <style type="text/css">
+      html, body {
+        margin: .5rem;
+        padding: 0;
+        background: #222;
+        color: #fff;
+        font-family: 'PT Serif', serif;
+        font-size: 16pt;
+      }
+
+      a:link, a:hover, a:active, a:visited {
+        color: #fbef;
+      }
+
+      main {
+        margin: 0 auto;
+        width: 40rem;
+      }
+
+      figure {
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        main {
+          width: inherit;
+          word-wrap: break-word;
+        }
+
+        figure img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <p><em>
+      <a href="https://twitter.com/DanHowardGames">Dan Howard</a> interviewed
+      me in early 2019, and published the interview on a website called
+      PICOPortr8s but has since had to take the site down; the following is an
+      online backup of that interview, originally published 2019-07-16.
+    </em></p>
+
+    <main>
+        <h1>Andrew “kittenm4ster” Anderson</h1>
+
+<p><a href="https://twitter.com/kittenm4ster">kittenm4ster</a> is a musician and developer whose PICO-8 carts explore the ‘beautiful, funny or profound’. Existing in a space that not many games explore, his creations take the player on unexpected journeys.</p>
+<p><strong>Can you tell me a little about yourself?</strong></p>
+<p>My name is Andrew Anderson and my silly internet name is <a href="https://twitter.com/kittenm4ster">kittenm4ster</a>. I was born in 1987 in California. I started programming in QBASIC when I was 9 years old (on an office computer our family had recently inherited when my lawyer grandpa died; I’ve often thought about how different my life might be if that hadn’t happened). Since then I’ve had basically two main hobbies in my life: music (guitar mostly) and computers. One of those hobbies turned into a job somehow and now I work as a software developer. I live in Oregon, and I have a wife, a five-year-old son, and a two-year-old daughter!</p>
+<p><strong>What first attracted you to PICO-8?</strong></p>
+<p>It was before PICO-8 had been released, so I guess it was 2014 or early 2015. I don’t remember where I heard about it, but somehow I followed a link to the front page of the PICO-8 website, and I saw the little demo animated GIF which showed the tools being used to edit Jelpi. I felt an instant attraction…it was basically love at first sight. I couldn’t wait for this “fantasy console” thing to be released.</p>
+<p>It just had such a “cozy” look and feel to it; everything I needed to make a game was right there in one tiny place!</p>
+<p>The other things that attracted me were its focus on simple gamepad input and its strong cross-platform support (I run Linux on my PCs so that’s always a factor for me when choosing tools).</p>
+<p><strong>What do you enjoy most about using PICO-8 to create?</strong></p>
+<p>I enjoy so much, but what I enjoy most is probably not having to worry about things like what palette I’m going to use, what resolution I’m going to use, etc. It frees me up to focus on the important part: the creative part!</p>
+<p><strong>One of my favourite carts of yours is Orbiter Suite. Can you tell us a little about the design/development process behind it? What were your goals?</strong></p>
+<p>In short: I played around with a bunch of ideas until a game came out.</p>
+<p>I had no grand vision; I just started with a desire to make something with orbital gravity physics, for no other reason than because I like how it feels: the weight of the movement, the competing gravity of several bodies, the curved paths that result from traversing among them…I find games can be very kinetically satisfying in that way, even though they are virtual and nothing is actually moving.</p>
+<p>Believe it or not, my first idea for how to employ such a concept was to make an interplanetary pizza delivery game. You would be tasked with launching a pizza to a specific planet, whose alien inhabitants would then rejoice at the revelation of this amazing new form of food. I often bounce ideas off my wife, so I don’t exactly remember which one of us came up with which parts of this concept, but we both thought it sounded really funny, which I often interpret as the sign of a “good” idea.</p>
+<figure>
+  <img src="pizza_1.gif" alt="" />
+  <figcaption>
+    <a href="https://kittenm4ster.itch.io/orbiter-suite">Orbiter Suite</a>
+    originally started life as an interstellar pizza delivery game
+  </figcaption>
+</figure>
+<p>But I had no idea how to achieve physics like this from a technical standpoint, so I started researching algorithms and prototyping things. I got something simple working, and then I started trying to see if I could get a “moon” to get in a stable orbit around a “planet”. Through trial and error I got it working, but it was too difficult to reliably reproduce, so I started wondering if I could fake it a little. I had recently experimented with “boids” flocking behaviors, so I wondered if I could use those same sorts of combinatory vector impulses to kind of smoothly transition out of realistic physics and enter into an automatically maintained stable orbit around the nearest planet. To my amazement, it actually worked.</p>
+<p>The two remaining pieces of the main mechanic came from old isolated ideas I had floating around in my head. The idea of finding invisible things on a black background by touching them and lighting them up was something I had experimented with (in a platformer context) a few years earlier, and the central concept of orbiting around a point and boosting off just at the right time to hit another point was a very old…I don’t know what to call it…a sort of idle imagination that I would occasionally find myself visualizing when looking at patterns on tile or carpet (that sounds very strange now that I describe it verbally). These things felt natural in this context and just sort of fell into place.</p>
+<p>This is probably a good time to mention a general feeling I have about the creative process. Some people say they create to “express themselves”. I have never really felt that. Rather, I create to express something I have discovered about the universe…at least that’s what it feels like. I try to capture some idea or feeling that I find to be beautiful, and fit it inside a cartridge.</p>
+<p>Anyway, I gradually got rid of the pizza idea; I had found a different, simpler direction to go, so I followed it. Simpler is usually better anyway. So I had this core mechanic but I wanted to somehow turn it into a “game” with some structure. It seemed like the planets should do something once you found them all, so I prototyped a bunch of different things to see how they felt. I also started composing some music, and discovered I could do a neat polyrhythm that I had never done before in PICO-8.</p>
+<p>I had a bunch more pieces of game now, but I still couldn’t decide on an overall structure. I experienced a period of frustration and doubt as to whether I would ever be able to turn it into anything I’d be satisfied with, honestly. Then a game jam started and it looked like fun so I ended up leaving the project on the backburner for a few months while I made two other very silly carts (a totally historically accurate <a href="https://www.lexaloffle.com/bbs/?pid=45572#p">Martin Luther simulator</a> for the jam, and a <a href="https://www.lexaloffle.com/bbs/?pid=49180#p">fake disk defragmenter</a> that I felt compelled to make for some reason). I then revisited this project with fresh eyes, determined to finish it.</p>
+<p>I took inventory of the work I had sitting there so far, and I noticed I had roughly three musical ideas. It would probably more accurately be called “Orbiter Theme And Variations”, but I liked the idea that the planets were dancing to this music, and that there would be distinct “movements”, so I had enough justification to call it a “suite” (which I liked the sound of). Everything then flowed out of that three-movement structure. I also thought it would be fun to target an astronomical event for the release date, so I picked a new moon a couple months away, partly to motivate myself to finish it by then. Oh, and then I asked my wife to draw the cart label image for it and she did an amazing job (shout out to Aubrianne!)</p>
+<figure>
+  <img src="andrew.jpg" alt="Andrew Anderson wearing a coat, gloves, beanie, and sunglasses and pushing a stroller containing a small child" width="387px" />
+  <figcaption>
+    Andrew’s carts feel unique and fresh by eschewing established mechanics.
+  </figcaption>
+</figure>
+<p>As for my “goals”, they evolved as I saw what the game was becoming, but I guess in the end I wanted to evoke a feeling of cute, playful mystery, but with moments of contemplative silence and awe. I wanted the music and the visuals to feel cohesive together, and I wanted the whole thing to have a musical quality to it (which is why I spent a lot of time on a subtle transposition effect where the player’s SFX matches the current chord of the music).</p>
+<p>I’m very happy with the way it turned out and the way it’s been received; several people have told me it felt beautiful to the point that they got emotional or even cried…I couldn’t ask for a better outcome than that.</p>
+<p><strong>Your carts are notable by their sense of humour and a lack of conflict or violence. What does this mean to you?</strong></p>
+<p>Thank you for bringing this up! So let me just point out that you noticed this characteristic of my carts without me ever mentioning it. It is “notable” that a videogame does not contain conflict or violence. Just think about that! You’ve hit directly on the source of what has become my obsession for the past few years and has changed the way I think about games.</p>
+<p>Videogames are computer programs that can literally do whatever we want, yet the overwhelming majority seem to recycle the same mechanics over and over again. I think videogames have an incredible amount of potential to do crazy, weird, fun things and create experiences not possible in any other medium! Fortunately, there are games out there that are doing this sort of thing and I get excited whenever I spot one of them. What you see in my PICO-8 carts is basically my own attempt to explore this space (in my spare time, while working a full-time job and trying to raise kids).</p>
+<p>To that end, when I first started using PICO-8, I decided to set a rule for myself: I would not make any carts that used violence-oriented mechanics. I think I was primarily inspired by something Phil Fish said in some interviews about FEZ; that game had a huge impact on me (which is why I was reading interviews about it). I remember Phil Fish specifically talked about the fact that FEZ contains no enemies. Something about that really stuck with me…in fact I just now went and found those interviews again and I just realized I had forgotten how much of my current approach to games seems to take direct inspiration from things he said. My idea to challenge myself must have come from this:</p>
+<blockquote><p>“[…] it was always our intention to make a really relaxing and non-threatening game, almost as a personal challenge: can I make a good game without having to resort to the established mechanics that you take for granted.” Phil Fish (<a href="https://www.gamasutra.com/view/news/127312/How_Polytrons_Fez_Was_Inspired_By_Uedas_Ico.php">https://www.gamasutra.com/view/news/127312/How_Polytrons_Fez_Was_Inspired_By_Uedas_Ico.php</a>)</p></blockquote>
+<p>So I guess you could say I’ve being doing a series of experiments, using PICO-8 as my medium, trying to understand how to make games without resorting to those “established mechanics” that are usually taken for granted. Conveniently, this seems to be conducive to making games that feel unique and fresh.</p>
+<p>But over time, I’ve come to realize something about myself. I’ve discovered this intentional omission is not just a technique for making unique games. I’ve discovered that, more often than not, I don’t actually enjoy those established mechanics anyway. I especially don’t enjoy games that take a sort of adversarial stance toward me as a player. I don’t want to feel like I’m being attacked by enemies bent on killing me just because I exist. I don’t want my time wasted by being told I got a “game over” and I have to do it again. I’d much rather play games that take a welcoming stance, inviting me to discover something beautiful or funny or profound, without fear of failure or negative consequences. I try to make those sorts of games.</p>
+<p><strong>How does having strict limitations on code and graphics, affect the way you think about your carts?</strong></p>
+<p>It definitely influences decisions. The great thing about it is that it’s much easier to feel like I’ve “finished” something and it’s done, all wrapped up neatly in a little cartridge. It frees my mind from having to worry about just one more thing I could have added, because in most cases I really didn’t have any more room anyway.</p>
+<p><strong>If you could change one aspect of PICO-8 what would it be?</strong></p>
+<p>I would double down on the gamepad-orientedness, or at least on the distinction between the “devkit” and the end-user “console”. I think the PICO-8 user experience (as opposed to the developer experience) suffers a bit from its lack of clarity on that point with regard to input methods.</p>
+<p><strong>What are you working on at the moment?</strong></p>
+<p>I always seem to have a few different irons in the fire. I usually like to keep my projects a secret, using only family and friends as a test audience before releasing to the public, but I’ll say one of the things I’ve been exploring is inspired by the 1983 game Troll’s Tale. But the truth is I’m almost never exactly sure what I’m making because most of the time it ends up turning into something else 🙂</p>
+<p><strong>What is your favourite cart?</strong></p>
+<p>Probably <a href="https://www.lexaloffle.com/bbs/?tid=30172">Happy Larry and the Vampire Bat</a>. It has a delightful sort of Animal Crossing feeling to it as you walk around and ask a series of animals to join you on your quest, and there’s catchy music all the while (and I love the way it changes to a complimentary secondary theme when you start talking to someone!). The whole thing has a charming rough-around-the-edges game-jam game feel but that somehow makes it even better. And the narrative with its wholesome twist at the end is brilliant. Also who doesn’t love a game where you play as a dog?</p>
+    </main>
+  </body>
+</html>
