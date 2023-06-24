@@ -122,4 +122,8 @@ ul.not-links li {
   ul.pico8-carts img {
     min-width: 160px;
   }
+
+  #badges {
+    text-align: center;
+  }
 }
