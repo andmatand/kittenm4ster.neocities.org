@@ -60,7 +60,11 @@ img {
   height: auto;
 }
 
-a.no-disco {
+a.no-disco,
+a.no-disco:link,
+a.no-disco:visited
+{
+  display: inline;
   padding: 0;
   background-color: inherit;
 }
