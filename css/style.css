@@ -27,6 +27,15 @@ li {
   padding: 0;
 }
 
+@keyframes color-cycle {
+    0% { background-color: rgb(  7, 148, 202); }
+   20% { background-color: rgb(226,  31, 149); }
+   40% { background-color: rgb(249, 124,  57); }
+   60% { background-color: rgb(254, 224,  76); }
+   80% { background-color: rgb(124, 210, 109); }
+  100% { background-color: rgb(  7, 148, 202); }
+}
+
 a,
 a:link,
 a:visited
@@ -38,13 +47,35 @@ a:visited
   color: #222;
 
   text-decoration: none;
+
+  animation-name: color-cycle;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-a.initialized {
-  transition:
-    background-color 1s linear,
-    color 100ms ease-in-out,
-    opacity 500ms linear;
+ul > li:nth-child(0) > a {
+  animation-delay: 0s;
+}
+
+ul > li:nth-child(1) > a {
+  animation-delay: -1.66s;
+}
+
+ul > li:nth-child(2) > a {
+  animation-delay: -3.33s;
+}
+
+ul > li:nth-child(3) > a {
+  animation-delay: -5s;
+}
+
+ul > li:nth-child(4) > a {
+  animation-delay: -6.66s;
+}
+
+ul > li:nth-child(5) > a {
+  animation-delay: -8.33s;
 }
 
 a:hover,
@@ -52,7 +83,7 @@ a:focus,
 a:active
 {
   color: white;
-  transition: background-color 100ms linear, color 100ms ease-in-out;
+  animation-duration: 3.33s;
 }
 
 img {
@@ -67,6 +98,7 @@ a.no-disco:visited
   display: inline;
   padding: 0;
   background-color: inherit;
+  animation: none;
 }
 
 ul.pico8-carts img {
