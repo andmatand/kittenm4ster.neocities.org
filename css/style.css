@@ -55,27 +55,23 @@ a:visited
 }
 
 ul > li:nth-child(5n + 1) > a {
-  animation-delay: 0s;
+  animation-delay: 0;
 }
 
 ul > li:nth-child(5n + 2) > a {
-  animation-delay: -1.66s;
+  animation-delay: -2s;
 }
 
 ul > li:nth-child(5n + 3) > a {
-  animation-delay: -3.33s;
+  animation-delay: -4s;
 }
 
 ul > li:nth-child(5n + 4) > a {
-  animation-delay: -5s;
+  animation-delay: -6s;
 }
 
 ul > li:nth-child(5n + 5) > a {
-  animation-delay: -6.66s;
-}
-
-ul > li:nth-child(5n + 6) > a {
-  animation-delay: -8.33s;
+  animation-delay: -8s;
 }
 
 a:hover,
